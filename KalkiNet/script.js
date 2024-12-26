@@ -207,3 +207,16 @@ Bg3.addEventListener('click', () => {
     Bg2.classList.remove('active');
     changeBG();
 });
+// Select all accept buttons using their common class
+const acceptButtons = document.querySelectorAll('.acceptButton');
+
+// Add a click event listener to each accept button
+acceptButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Change the button text to 'Accepted'
+        button.textContent = 'Accepted';
+        // Optionally, disable the button to prevent further clicks
+        button.disabled = true;
+    });
+});
+
